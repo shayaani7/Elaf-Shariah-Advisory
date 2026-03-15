@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Elaf Shariah Advisory</title>
+    <meta
+      name="description"
+      content="Initiate an executive consultation with Elaf Shariah Advisory. Schedule a call to discuss your Islamic finance and Shariah compliance requirements."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="nav-logo"><span>Elaf</span> Advisory</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Advisory Services</a>
+          <a href="case-studies.html">Case Studies</a>
+          <a href="resources.html">Knowledge &amp; Resources</a>
+          <a href="contact.html" class="nav-cta">Book Executive Consultation</a>
+        </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== PAGE BANNER ===== -->
+    <section class="page-banner">
+      <div class="container">
+        <h1>Initiate an Executive Consultation.</h1>
+        <p>
+          Tell us about your project and objectives. We will respond within one
+          business day.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT FORM + INFO ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Onboarding Form -->
+          <div class="form-section">
+            <h3
+              style="
+                font-family: &quot;Playfair Display&quot;, serif;
+                font-size: 1.4rem;
+                color: var(--navy);
+                margin-bottom: 28px;
+              "
+            >
+              Executive Consultation Request
+            </h3>
+            <form data-form="contact">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Full Name</label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    placeholder="Your full name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="contact-title">Corporate Title</label>
+                  <input
+                    type="text"
+                    id="contact-title"
+                    name="title"
+                    placeholder="e.g., CEO, Head of Compliance"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-company">Institution / Company</label>
+                  <input
+                    type="text"
+                    id="contact-company"
+                    name="company"
+                    placeholder="Your organization"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="contact-region">Region</label>
+                  <select id="contact-region" name="region" required>
+                    <option value="">Select your region</option>
+                    <option value="gcc">GCC (UAE, KSA, Qatar, etc.)</option>
+                    <option value="mena">MENA</option>
+                    <option value="southeast-asia">Southeast Asia</option>
+                    <option value="north-america">North America</option>
+                    <option value="europe">Europe &amp; UK</option>
+                    <option value="africa">Africa</option>
+                    <option value="central-asia">Central Asia</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  placeholder="executive@yourcompany.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contact-inquiry">Nature of Inquiry</label>
+                <select id="contact-inquiry" name="inquiry" required>
+                  <option value="">Select inquiry type</option>
+                  <option value="product-structuring">
+                    Islamic Financial Product Structuring
+                  </option>
+                  <option value="digital-banking">
+                    Digital Banking Compliance
+                  </option>
+                  <option value="fintech-crypto">
+                    FinTech, Crypto &amp; Digital Assets
+                  </option>
+                  <option value="regtech">RegTech Integration</option>
+                  <option value="frontier-markets">
+                    Frontier Market Expansion
+                  </option>
+                  <option value="sustainable-finance">
+                    Sustainable Finance &amp; Green Sukuk
+                  </option>
+                  <option value="shariah-board">
+                    Shariah Board Representation
+                  </option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contact-brief">Project Brief</label>
+                <textarea
+                  id="contact-brief"
+                  name="brief"
+                  placeholder="Please describe your project objectives, timeline, and any specific requirements..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-gold">
+                Submit Consultation Request
+              </button>
+              <div class="form-success">
+                Your consultation request has been submitted successfully. Our
+                team will respond within one business day.
+              </div>
+            </form>
+          </div>
+
+          <!-- Contact Info Card -->
+          <div class="contact-info-card">
+            <h3>Direct Contact</h3>
+
+            <div class="contact-item">
+              <div class="contact-icon">&#9679;</div>
+              <div>
+                <h4>Office</h4>
+                <p>Corporate Hub<br />Rawalpindi / Wah Cantt<br />Pakistan</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">&#9679;</div>
+              <div>
+                <h4>Email</h4>
+                <p>executive@elafadvisory.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">&#9679;</div>
+              <div>
+                <h4>WhatsApp / Direct</h4>
+                <p>+92 XXX XXXXXXX</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">&#9679;</div>
+              <div>
+                <h4>Operating Hours</h4>
+                <p>
+                  Monday &ndash; Saturday<br />8:00 AM &ndash; 5:00 PM
+                  (GST/PKT)<br />Sunday: CLOSED
+                </p>
+              </div>
+            </div>
+
+            <div class="map-placeholder">Map Coming Soon</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand"><span>Elaf</span> Advisory</div>
+            <p class="footer-desc">
+              Bridging Classical Authority with Global Digital Infrastructure.
+            </p>
+            <div class="footer-contact-item">
+              <span>&#9679;</span> Corporate Hub, Rawalpindi / Wah Cantt,
+              Pakistan
+            </div>
+            <div class="footer-contact-item">
+              <span>&#9679;</span> executive@elafadvisory.com
+            </div>
+            <div class="footer-contact-item">
+              <span>&#9679;</span> +92 XXX XXXXXXX
+            </div>
+            <div class="footer-contact-item">
+              <span>&#9679;</span> Mon &ndash; Sat: 8:00 AM &ndash; 5:00 PM
+              (PKT)
+            </div>
+          </div>
+          <div>
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+              <a href="services.html">Advisory Services</a>
+              <a href="case-studies.html">Case Studies</a>
+              <a href="resources.html">Knowledge &amp; Resources</a>
+              <a href="resources.html#ask">Ask the Advisor</a>
+              <a href="#">Client Portal Login</a>
+            </div>
+          </div>
+          <div>
+            <h4>Executive Intelligence Briefing</h4>
+            <p class="footer-desc">
+              Get the latest updates on Islamic finance regulations and fintech
+              innovations.
+            </p>
+            <form class="newsletter-form">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                required
+              />
+              <button type="submit">Subscribe</button>
+            </form>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+              <a href="#" class="social-link" aria-label="Twitter">X</a>
+              <a href="#" class="social-link" aria-label="Facebook">f</a>
+            </div>
+            <div class="footer-legal">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms &amp; Conditions</a>
+              <a href="#">Disclaimer</a>
+              <a href="#">FAQs</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2026 Elaf Shariah Advisory. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
