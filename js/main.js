@@ -62,6 +62,64 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- Form Handling ---
+  const FORMS_EMAIL = 'shayanfaiq34@gmail.com';
+
+  function sendMailto(subject, body) {
+    const mailto = `mailto:${FORMS_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+  }
+
+  function handleContactForm(form) {
+    const name = form.querySelector('[name="name"]')?.value || '';
+    const title = form.querySelector('[name="title"]')?.value || '';
+    const company = form.querySelector('[name="company"]')?.value || '';
+    const regionSelect = form.querySelector('[name="region"]');
+    const region = regionSelect && regionSelect.options[regionSelect.selectedIndex]?.text || '';
+    const email = form.querySelector('[name="email"]')?.value || '';
+    const inquirySelect = form.querySelector('[name="inquiry"]');
+    const inquiry = inquirySelect && inquirySelect.options[inquirySelect.selectedIndex]?.text || '';
+    const brief = form.querySelector('[name="brief"]')?.value || '';
+
+    const subject = 'New Executive Consultation Request';
+    const body = [
+      'A new executive consultation request has been submitted from the website.',
+      '',
+      `Full Name: ${name}`,
+      `Corporate Title: ${title}`,
+      `Company: ${company}`,
+      `Region: ${region}`,
+      `Email: ${email}`,
+      `Nature of Inquiry: ${inquiry}`,
+      '',
+      'Project Brief:',
+      brief
+    ].join('\n');
+
+    sendMailto(subject, body);
+  }
+
+  function handleAskAdvisorForm(form) {
+    const name = form.querySelector('[name="name"]')?.value || '';
+    const email = form.querySelector('[name="email"]')?.value || '';
+    const categorySelect = form.querySelector('[name="category"]');
+    const category = categorySelect && categorySelect.options[categorySelect.selectedIndex]?.text || '';
+    const question = form.querySelector('[name="question"]')?.value || '';
+
+    const subject = 'New Ask the Advisor Question';
+    const body = [
+      'A new question has been submitted via Ask the Advisor.',
+      '',
+      `Full Name: ${name}`,
+      `Email: ${email}`,
+      `Category: ${category}`,
+      '',
+      'Question:',
+      question
+    ].join('\n');
+
+    sendMailto(subject, body);
+  }
+
   document.querySelectorAll('form[data-form]').forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -78,6 +136,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (!valid) return;
+
+      const formType = form.dataset.form;
+      if (formType === 'contact') {
+        handleContactForm(form);
+      } else if (formType === 'ask-advisor') {
+        handleAskAdvisorForm(form);
+      }
 
       // Show success message
       const successEl = form.querySelector('.form-success');
