@@ -74,4 +74,69 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- Seamless Hero Video Loop (double-buffer crossfade) ---
+  // Fixes end-frame flash by crossfading between two stacked videos.
+  const heroVideos = Array.from(document.querySelectorAll('.hero-bg-video')).filter(
+    (el) => el instanceof HTMLVideoElement
+  );
+
+  if (heroVideos.length >= 2) {
+    let active = heroVideos.find(v => v.classList.contains('is-active')) || heroVideos[0];
+    let standby = heroVideos.find(v => v !== active) || heroVideos[1];
+    let swapping = false;
+
+    const makeStandbyReady = async () => {
+      standby.loop = false;
+      standby.muted = true;
+      standby.playsInline = true;
+      standby.preload = 'auto';
+      try {
+        standby.currentTime = 0;
+      } catch (_) {}
+      try {
+        await standby.play();
+      } catch (_) {
+        // autoplay might be blocked in rare cases; ignore
+      }
+    };
+
+    const swap = async () => {
+      if (swapping) return;
+      swapping = true;
+
+      await makeStandbyReady();
+
+      standby.classList.add('is-active');
+      active.classList.remove('is-active');
+
+      // After crossfade completes, pause old active to save CPU.
+      setTimeout(() => {
+        try {
+          active.pause();
+        } catch (_) {}
+
+        const prevActive = active;
+        active = standby;
+        standby = prevActive;
+        swapping = false;
+      }, 420);
+    };
+
+    // Ensure active is playing
+    try {
+      active.play().catch(() => {});
+    } catch (_) {}
+
+    active.addEventListener('timeupdate', () => {
+      if (swapping) return;
+      if (!Number.isFinite(active.duration) || active.duration <= 0) return;
+      // Trigger early enough to avoid any bad end frames.
+      if (active.currentTime >= active.duration - 1.0) swap();
+    });
+
+    active.addEventListener('ended', () => {
+      swap();
+    });
+  }
+
 });

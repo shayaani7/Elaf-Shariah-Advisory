@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -39,7 +40,14 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero">
+      <video class="hero-bg-video is-active" autoplay muted playsinline preload="auto">
+        <source src="assets/media/hero.webm" type="video/webm" />
+      </video>
+      <video class="hero-bg-video hero-bg-video--alt" autoplay muted playsinline preload="auto">
+        <source src="assets/media/hero.webm" type="video/webm" />
+      </video>
       <div class="container">
+        <span class="hero-eyebrow">Global Shariah Advisory Firm</span>
         <h1>
           Global <span>Shariah Advisory</span> &amp; Islamic Financial
           Architecture.
@@ -77,7 +85,7 @@
     <!-- ===== CLIENT PROBLEM ===== -->
     <section class="section">
       <div class="container">
-        <h2 class="section-title">
+        <h2 class="section-title no-underline">
           The Industry Disconnect: Compliance Without Commercial Strategy.
         </h2>
         <p class="section-subtitle">
@@ -126,7 +134,7 @@
     <!-- ===== SERVICES SUMMARY ===== -->
     <section class="section section-light">
       <div class="container">
-        <h2 class="section-title">End-to-End Islamic Financial Engineering</h2>
+        <h2 class="section-title no-underline">End-to-End Islamic Financial Engineering</h2>
         <p class="section-subtitle">
           Highly specialized, commercially viable structuring across traditional
           and frontier financial sectors.
@@ -134,7 +142,7 @@
 
         <div class="services-grid">
           <div class="service-card">
-            <div class="service-icon">&#9878;</div>
+            <div class="service-icon"><i class="ti ti-scale"></i></div>
             <h3>Financial Product Structuring</h3>
             <p>
               Murabaha, Musharakah, Ijarah, Sukuk, and Takaful frameworks for
@@ -142,7 +150,7 @@
             </p>
           </div>
           <div class="service-card">
-            <div class="service-icon">&#9881;</div>
+            <div class="service-icon"><i class="ti ti-shield-check"></i></div>
             <h3>Digital Banking Compliance</h3>
             <p>
               End-to-end Shariah compliance for digital-only Islamic banks and
@@ -150,7 +158,7 @@
             </p>
           </div>
           <div class="service-card">
-            <div class="service-icon">&#11042;</div>
+            <div class="service-icon"><i class="ti ti-currency-bitcoin"></i></div>
             <h3>FinTech, Crypto &amp; Digital Assets</h3>
             <p>
               Fatawa on cryptocurrencies, tokenized RWAs, and digital lending
@@ -158,7 +166,7 @@
             </p>
           </div>
           <div class="service-card">
-            <div class="service-icon">&#8644;</div>
+            <div class="service-icon"><i class="ti ti-refresh"></i></div>
             <h3>RegTech Integration</h3>
             <p>
               Automating Shariah screening and compliance protocols in your
@@ -166,7 +174,7 @@
             </p>
           </div>
           <div class="service-card">
-            <div class="service-icon">&#127758;</div>
+            <div class="service-icon"><i class="ti ti-world"></i></div>
             <h3>Frontier Market Expansion</h3>
             <p>
               Regulatory advisory for central banks and institutions in emerging
@@ -174,7 +182,7 @@
             </p>
           </div>
           <div class="service-card">
-            <div class="service-icon">&#9752;</div>
+            <div class="service-icon"><i class="ti ti-leaf"></i></div>
             <h3>Sustainable Finance &amp; Green Sukuk</h3>
             <p>
               ESG funds, ethical portfolios, and Green Sukuk aligned with
@@ -192,61 +200,91 @@
     </section>
 
     <!-- ===== ADVISORY PROCESS ===== -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">A Framework Built for Clarity and Speed</h2>
-        <p class="section-subtitle">
-          Our six-step process ensures your project moves from strategy to
-          deployment with precision.
-        </p>
+    <section class="timeline-section">
+      <div class="timeline-header">
+        <p class="timeline-label">Our Process</p>
+        <h2 class="timeline-title">A Framework Built for Clarity and Speed</h2>
+        <p class="timeline-subtitle">Our six-step process ensures your project moves from strategy to deployment with precision.</p>
+      </div>
 
-        <div class="process-steps">
-          <div class="process-step">
-            <div class="step-number">1</div>
-            <h4>Strategic Consultation</h4>
-            <p>Defining your commercial and operational objectives.</p>
+      <div class="timeline-track">
+        <div class="timeline-line"></div>
+
+        <!-- Step 1 — odd: card LEFT -->
+        <div class="timeline-row">
+          <div class="tl-card tl-card--right">
+            <h4 class="tl-card-title">Strategic Consultation</h4>
+            <p class="tl-card-body">Defining your commercial and operational objectives.</p>
           </div>
-          <div class="process-step">
-            <div class="step-number">2</div>
-            <h4>Diagnostic Review</h4>
-            <p>Identifying structural and compliance gaps.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">3</div>
-            <h4>Shariah Structuring</h4>
-            <p>Engineering the financial model and workflow.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">4</div>
-            <h4>Documentation</h4>
-            <p>Drafting contracts and issuing binding rulings.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">5</div>
-            <h4>Implementation</h4>
-            <p>Guiding your teams through deployment.</p>
-          </div>
-          <div class="process-step">
-            <div class="step-number">6</div>
-            <h4>Ongoing Governance</h4>
-            <p>Annual board representation and audit oversight.</p>
+          <div class="tl-node"><span>1</span></div>
+          <div class="tl-empty"></div>
+        </div>
+
+        <!-- Step 2 — even: card RIGHT -->
+        <div class="timeline-row">
+          <div class="tl-empty"></div>
+          <div class="tl-node"><span>2</span></div>
+          <div class="tl-card tl-card--left">
+            <h4 class="tl-card-title">Diagnostic Review</h4>
+            <p class="tl-card-body">Identifying structural and compliance gaps.</p>
           </div>
         </div>
+
+        <!-- Step 3 — odd: card LEFT -->
+        <div class="timeline-row">
+          <div class="tl-card tl-card--right">
+            <h4 class="tl-card-title">Shariah Structuring</h4>
+            <p class="tl-card-body">Engineering the financial model and workflow.</p>
+          </div>
+          <div class="tl-node"><span>3</span></div>
+          <div class="tl-empty"></div>
+        </div>
+
+        <!-- Step 4 — even: card RIGHT -->
+        <div class="timeline-row">
+          <div class="tl-empty"></div>
+          <div class="tl-node"><span>4</span></div>
+          <div class="tl-card tl-card--left">
+            <h4 class="tl-card-title">Documentation</h4>
+            <p class="tl-card-body">Drafting contracts and issuing binding rulings.</p>
+          </div>
+        </div>
+
+        <!-- Step 5 — odd: card LEFT -->
+        <div class="timeline-row">
+          <div class="tl-card tl-card--right">
+            <h4 class="tl-card-title">Implementation</h4>
+            <p class="tl-card-body">Guiding your teams through deployment.</p>
+          </div>
+          <div class="tl-node"><span>5</span></div>
+          <div class="tl-empty"></div>
+        </div>
+
+        <!-- Step 6 — even: card RIGHT -->
+        <div class="timeline-row">
+          <div class="tl-empty"></div>
+          <div class="tl-node"><span>6</span></div>
+          <div class="tl-card tl-card--left">
+            <h4 class="tl-card-title">Ongoing Governance</h4>
+            <p class="tl-card-body">Annual board representation and audit oversight.</p>
+          </div>
+        </div>
+
       </div>
     </section>
 
     <!-- ===== TRUSTED BY ===== -->
     <section class="trusted-section">
       <div class="container">
-        <h3>Trusted by Leading Organizations Worldwide</h3>
-        <div class="client-logos">
-          <span class="client-logo">EQRAZ</span>
-          <span class="client-logo">Musaffa</span>
-          <span class="client-logo">Malco</span>
-          <span class="client-logo">HTC</span>
-          <span class="client-logo">Systemrapid</span>
-          <span class="client-logo">Ruya Bank</span>
-          <span class="client-logo">STC Bank</span>
+        <div class="trusted-label">TRUSTED BY LEADING ORGANIZATIONS WORLDWIDE</div>
+        <div class="trusted-badges">
+          <span class="trusted-badge">EQRAZ</span>
+          <span class="trusted-badge">MUSAFFA</span>
+          <span class="trusted-badge">MALCO</span>
+          <span class="trusted-badge">HTC</span>
+          <span class="trusted-badge">SYSTEMRAPID</span>
+          <span class="trusted-badge">RUYA BANK</span>
+          <span class="trusted-badge">STC BANK</span>
         </div>
       </div>
     </section>
